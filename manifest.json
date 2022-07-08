@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "ChessEQ Extension",
+    "version": "0.1",
+    "permissions": [
+        "activeTab"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*.chess.com/*"
+            ],
+            "css": [], 
+            "js": ["content.js"]
+        }
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_icon": "ct.png"
+    }
+}
